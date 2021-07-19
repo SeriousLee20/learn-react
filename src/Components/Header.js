@@ -4,7 +4,7 @@ import React from "react"
 function Header(){
 
     return (
-        <h1>This is a header.</h1>
+        <header className = "navbar">This is a header.</header>
     );
 }
 

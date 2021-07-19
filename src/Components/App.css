@@ -1,0 +1,25 @@
+.navbar{
+    font-family: 'georgia';
+    text-decoration: dotted;
+    text-align: center;
+    font-size: 30px;
+    background-color: olive;
+  }
+
+  .note{
+      background-color: grey;
+    font-size: 18px;
+    text-align: end;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+  a:link{
+    color: rgb(61, 221, 109);
+    font-size:20px;
+  }
+
+  a:visited{
+
+    color: rgb(77, 37, 189);
+  }
+
