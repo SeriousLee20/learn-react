@@ -2,6 +2,8 @@ import MyInfo from "./MyInfo";
 import Header from "./Header"
 import Footer from "./Footer";
 import MainContent from "./MainContent";
+import Contacts from "./Contacts";
+
 import './App.css'
 
 function App(){
@@ -12,17 +14,10 @@ function App(){
             <MainContent/>
             <MyInfo/>
             <Footer/>
-
-            <input type = "checkbox"/>
-            <p>Event 1</p>
-
-            <input type = "checkbox"/>
-            <p>Event 2</p>
+            <Contacts/>
             
-            <input type = "checkbox"/>
-            <p>Event 3</p>
-
-            <a href="https://www.sitepoint.com/react-components-styling-options/">css reference</a>
+            <a href="https://www.sitepoint.com/react-components-styling-options/">css reference</a><br/>
+            <a href="https://www.w3schools.com/tags/tag_input.asp">html input</a>
         </div>
     );
 }
