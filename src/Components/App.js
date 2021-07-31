@@ -6,10 +6,14 @@ import Contacts from "./Contacts";
 
 import './App.css'
 import Joke from "./Joke";
+import jokesData from "./jokesData";
 
 function App(){
 
+    const jokeComponent = jokesData.map(joke => <Joke key ={joke.id} question = {joke.question} punchLine = {joke.punchLine}/>)
+
     return (
+
         <div>
             <Header/>
             <MainContent/>
@@ -18,12 +22,7 @@ function App(){
             <Contacts/>
             
             <div>
-                <Joke punchLine="hahaha"/>
-                <Joke quest="What is the best thing about Switzerland?" punchLine="I don't know but the flag is a big plus!"/>
-                <Joke quest="What is the best thing about Switzerland?" punchLine="I don't know but the flag is a big plus!"/>
-                <Joke quest="What is the best thing about Switzerland?" punchLine="I don't know but the flag is a big plus!"/>
-                <Joke quest="What is the best thing about Switzerland?" punchLine="I don't know but the flag is a big plus!"/>
-                <Joke quest="What is the best thing about Switzerland?" punchLine="I don't know but the flag is a big plus!"/>
+                {jokeComponent}
             </div>
 
             <a href="https://www.sitepoint.com/react-components-styling-options/">css reference</a><br/>
