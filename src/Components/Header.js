@@ -1,11 +1,14 @@
-import React from "react"
+import React, {Component} from "react"
 
 
-function Header(){
+class Header extends Component{
 
-    return (
-        <header className = "navbar">This is a header.</header>
-    );
+    render() {
+       return (
+            <header className = "navbar">Hi {this.props.username}.</header>
+        ); 
+    }
+    
 }
 
 export default Header
