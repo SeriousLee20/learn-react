@@ -37,6 +37,13 @@ import React from "react";
 }*/
 
 class App extends React.Component{
+
+    constructor() {
+
+        super()
+        this.state = {answer: "Yes."}
+    }
+
     render(){
 
         const jokeComponent = jokesData.map(joke => <Joke key ={joke.id} question = {joke.question} punchLine = {joke.punchLine}/>)
@@ -46,7 +53,7 @@ class App extends React.Component{
 
             <div>
                 <Header username = "Amber"/>
-                <MainContent/>
+                <MainContent answer = {this.state.answer}/>
                 <MyInfo/>
                 <Footer/>
                 <Contacts/>
