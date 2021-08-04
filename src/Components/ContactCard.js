@@ -1,8 +1,7 @@
-import React from "react"
+import React, { Component } from "react"
 
 
-function ContactCard(props){
-    console.log(props)
+class ContactCard extends Component{
 
     /**
      * if props is not object:
@@ -13,16 +12,27 @@ function ContactCard(props){
      * <p> Email: {props.email} </p>
      * 
      */
-    return (
 
-        <div className = "contact-card">
-            
-           <img src={props.contact.imgUrl } alt="img"/>
-            <h3>{props.contact.name}</h3>
-            <p>Phone: {props.contact.phone}</p>
-            <p>Email: {props.contact.email}</p>
+   
+     hover() {
 
-        </div>
-    )
+        alert("Hovered")
+    }
+
+    render() {
+        return (
+
+            <div className = "contact-card">
+                
+               <img onMouseOver={this.hover} src={this.props.contact.imgUrl} alt="img"/>
+                <h3>{this.props.contact.name}</h3>
+                <p>Phone: {this.props.contact.phone}</p>
+                <p>Email: {this.props.contact.email}</p>
+                <button onClick= {() => alert("Clicked")}>{this.props.contact.imgUrl}</button>
+                
+            </div>
+        )
+    }
+    
 }
 export default ContactCard
