@@ -10,6 +10,7 @@ import products from "./vschoolProducts";
 import Product from "./Product";
 import React from "react";
 import ConditionalRender from './ConditionalRender';
+import ChangState from './ChangeState';
 
 /*function App(){
 
@@ -64,7 +65,8 @@ class App extends React.Component{
                 {jokeComponent}                
                 {productComponent}
                 <ConditionalRender/>
-
+                <ChangState/>
+                
                 <a href="https://www.sitepoint.com/react-components-styling-options/">css reference</a><br/>
                 <a href="https://www.w3schools.com/tags/tag_input.asp">html input</a>
             </div>
