@@ -9,6 +9,7 @@ import jokesData from "./jokesData";
 import products from "./vschoolProducts";
 import Product from "./Product";
 import React from "react";
+import ConditionalRender from './ConditionalRender';
 
 /*function App(){
 
@@ -38,8 +39,11 @@ import React from "react";
 
 class App extends React.Component{
 
+    // constructor always has super()
+    // Constructor is used to initialize the state of a class
+    // ***this.state pass values in a class
+    // ***this.props get value from other component
     constructor() {
-
         super()
         this.state = {answer: "Yes."}
     }
@@ -57,12 +61,9 @@ class App extends React.Component{
                 <MyInfo/>
                 <Footer/>
                 <Contacts/>
-                
-                <div>
-                    {jokeComponent}
-                </div>
-
+                {jokeComponent}                
                 {productComponent}
+                <ConditionalRender/>
 
                 <a href="https://www.sitepoint.com/react-components-styling-options/">css reference</a><br/>
                 <a href="https://www.w3schools.com/tags/tag_input.asp">html input</a>

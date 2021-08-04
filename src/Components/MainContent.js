@@ -9,10 +9,16 @@ class MainContent extends Component{
     //For "text", "password", and "hidden" - it defines the initial (default) value of the input field
     //For "checkbox", "radio", "image" - it defines the value associated with the input (this is also the value that is sent on submit)
     
+    constructor() {
 
+        super()
+        this.state = {
+            todos: todosData
+        }
+    }
     render() {
 
-        const todoComponent = todosData.map(todo => <TodoItem key = {todo.id} todo = {todo}/> )
+        const todoComponent = this.state.todos.map(todo => <TodoItem key = {todo.id} todo = {todo}/> )
 
         return (
             <div className = "mainContent">
