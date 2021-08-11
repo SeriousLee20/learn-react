@@ -14,6 +14,7 @@ class ChangeState extends Component {
     //if don't care about prev state: this.setState(count: 1)
     //don't use prevState.count++, because it returns ori value before incr
     // ++count = count + 1
+    // use arrow function then no need to bind with constuctor
     handleClick =() =>{
 
         this.setState(prevState => {

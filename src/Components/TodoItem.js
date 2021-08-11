@@ -1,15 +1,19 @@
-import React from "react"
+import React, { Component } from "react"
 
 
-function TodoItem(props) {
-    return (
-    <label>
-        <input type = "checkbox" 
-        name = "checkbox" 
-        value = {props.todo.text} 
-        checked = {props.todo.completed}/>
-        {props.todo.text}
-    </label>
-    );
+class TodoItem extends Component {
+    render() {
+        return (
+            <div>
+                <input 
+                    type = "checkbox" 
+                    checked = {this.props.item.completed}
+                    onChange={() => this.props.handleChange(this.props.item.id)}
+                />
+                {this.props.item.text}
+            </div>
+        );
+    }   
 }
+
 export default TodoItem
