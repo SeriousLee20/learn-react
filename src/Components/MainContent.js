@@ -23,6 +23,9 @@ class MainContent extends Component{
             const updatedTodos = prevState.todos.map(todo => {
                 if(todo.id === id){
                     return {
+                        // should return todo object here
+                        // can't change state of prevState directly by
+                        // 'todo.completed = !todo.completed
                         ...todo,
                         completed: !todo.completed
                     }
@@ -50,7 +53,6 @@ class MainContent extends Component{
                 
                 </div>
             </div>
-            
         );
     }
     
