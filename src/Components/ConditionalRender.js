@@ -10,23 +10,25 @@ class ConditionalRender extends Component{
         }
     }
 
+    handleClick =() =>{
+        this.setState(prevState => {
+
+            return {
+                isLoggedIn: !prevState.isLoggedIn
+            }
+        })
+    }
+
     render(){
-
-        let condition
-
-        if(this.state.isLoggedIn){
-
-                condition = "in"
-        }else{
-    
-            condition = "out"
-        }
-
+        let condition = this.state.isLoggedIn ? "LOG OUT" : "LOG IN"
+        let text = this.state.isLoggedIn ? "LOGGED IN" : "LOGGED OUT"
         return(
-
             <div>
-                <h1>You are currently logged {condition}</h1>
+                <h3>You are {text}</h3>
+                <button onClick = {this.handleClick}>{condition}</button>
+                
             </div>
+            
         )
     }
 }

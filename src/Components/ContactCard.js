@@ -16,7 +16,7 @@ class ContactCard extends Component{
    
      hover() {
 
-        alert("Hovered")
+        console.log("Hovered")
     }
 
     render() {
@@ -28,7 +28,7 @@ class ContactCard extends Component{
                 <h3>{this.props.contact.name}</h3>
                 <p>Phone: {this.props.contact.phone}</p>
                 <p>Email: {this.props.contact.email}</p>
-                <button onClick= {() => alert("Clicked")}>{this.props.contact.imgUrl}</button>
+                <button onClick= {() => console.log("Clicked")}>{this.props.contact.imgUrl}</button>
                 
             </div>
         )

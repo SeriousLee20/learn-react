@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import Conditional from "./Conditional";
 import todosData from "./todoData";
 import TodoItem from "./TodoItem"
 
@@ -13,12 +14,22 @@ class MainContent extends Component{
 
         super()
         this.state = {
-            todos: todosData
+            todos: todosData,
+            isLoading: true
         }
-        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange (id){
+    componentDidMount(){
+
+        setTimeout(() => {
+            this.setState({
+                    isLoading: false
+                })
+        }, 1500)
+
+    }
+
+    handleChange = (id) =>{
         this.setState(prevState => {
             const updatedTodos = prevState.todos.map(todo => {
                 if(todo.id === id){
@@ -47,10 +58,10 @@ class MainContent extends Component{
             <div className = "mainContent">
                 <main>Are cats cute? {this.props.answer}</main>
 
+                <Conditional isLoading = {this.state.isLoading}/>
+
                 <div className = "todoList">
-    
                     {todoComponent}
-                
                 </div>
             </div>
         );
