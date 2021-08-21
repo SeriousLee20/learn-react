@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Conditional from "./Conditional";
+import FetchAPI from "./FetchAPI";
 import todosData from "./todoData";
 import TodoItem from "./TodoItem"
 
@@ -19,6 +20,7 @@ class MainContent extends Component{
         }
     }
 
+    // isLoading will change state to false when timeout
     componentDidMount(){
 
         setTimeout(() => {
@@ -26,7 +28,6 @@ class MainContent extends Component{
                     isLoading: false
                 })
         }, 1500)
-
     }
 
     handleChange = (id) =>{
@@ -63,6 +64,8 @@ class MainContent extends Component{
                 <div className = "todoList">
                     {todoComponent}
                 </div>
+
+                <FetchAPI/>
             </div>
         );
     }

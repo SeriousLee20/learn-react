@@ -19,7 +19,7 @@ class Conditional extends Component{
             <div>
 
                 <p>This is some text</p>
-                {this.props.isLoading ? "Loading..." : "End :)"}
+                <h4>{this.props.isLoading ? "Loading..." : "End :)"}</h4>
                 <p>This is the end of text</p>
 
                 {
