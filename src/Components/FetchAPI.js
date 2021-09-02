@@ -7,7 +7,7 @@ class FetchAPI extends Component{
         super()
         this.state = {
             loading: false,
-            character: {}
+            character: []
         }
     }
 
@@ -17,7 +17,7 @@ class FetchAPI extends Component{
             loading: true
         })
 
-        fetch("https://swapi.dev/api/people/3")
+        fetch("https://swapi.dev/api/people")
             .then(response => response.json())
             .then(data => {
                 this.setState({
