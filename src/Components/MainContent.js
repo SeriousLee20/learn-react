@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 import Conditional from "./Conditional";
 import FetchAPI from "./FetchAPI";
+import Form from "./Form";
+import Form2 from "./Form2";
 import todosData from "./todoData";
 import TodoItem from "./TodoItem"
 
@@ -66,6 +68,12 @@ class MainContent extends Component{
                 </div>
 
                 <FetchAPI/>
+
+                <Form/>
+
+                <hr/>
+                
+                <Form2/>
             </div>
         );
     }
