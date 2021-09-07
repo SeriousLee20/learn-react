@@ -5,7 +5,7 @@ class Header extends Component{
 
     render() {
        return (
-            <header className = "navbar">Hi {this.props.username}.</header>
+            <navbar className = "navbar">Hi {this.props.username}.</navbar>
         ); 
     }
     
