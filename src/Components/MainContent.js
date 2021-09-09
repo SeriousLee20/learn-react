@@ -3,6 +3,7 @@ import Conditional from "./Conditional";
 import FetchAPI from "./FetchAPI";
 import Form from "./Form";
 import Form2 from "./Form2";
+import Hook from "./Hook";
 import MemeGenerator from "./MemeGenerator";
 import todosData from "./todoData";
 import TodoItem from "./TodoItem"
@@ -79,6 +80,8 @@ class MainContent extends Component{
                 <hr/>
                 <MemeGenerator/>
                 <hr/>
+
+                <Hook/>
             </div>
         );
     }
